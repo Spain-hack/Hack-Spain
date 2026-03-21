@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   db:
-    image: postgres:16-alpine # Используем легкий образ Alpine
+    image: postgres:18-alpine # Используем легкий образ Alpine
     container_name: postgres_container
     restart: always
     environment:
