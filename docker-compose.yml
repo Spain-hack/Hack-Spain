@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:16-alpine # Используем легкий образ Alpine
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: user        # Логин администратора
+      POSTGRES_PASSWORD: password # Пароль
+      POSTGRES_DB: mydatabase   # Имя БД по умолчанию
+    ports:
+      - "5432:5432"             # Проброс порта (хост:контейнер)
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Точка монтирования данных
+    networks:
+      - postgres_net
+
+volumes:
+  pgdata: # Именованный том для сохранения данных
+
+networks:
+  postgres_net:
