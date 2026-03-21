@@ -9,7 +9,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
-public class ClickHouseClientDBConfig {
+public class DBConfig {
 
     @Value("${spring.datasource.url}")
     private String url;

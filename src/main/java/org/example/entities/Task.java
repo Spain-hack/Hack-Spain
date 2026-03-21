@@ -1,2 +1,8 @@
-package org.example.entities;public class Task {
+package org.example.entities;
+
+import lombok.Data;
+
+@Data
+public class Task {
+
 }
